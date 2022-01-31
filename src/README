@@ -1,0 +1,29 @@
+Pitur Sebastian 334CA
+
+Am citit input-ul cu ajutorul clasei Input, salvand tranzitiile in matricea
+transitions.
+
+La problema accessible, am facut BFS pornind din starile initiale, salvandu-le
+pe toate in Set-ul accessibleStates al clasei cu acelasi nume.
+
+La problema productive, am luat starile pe rand si am pornit un dfs, iar daca
+ajungeam la o stare finala sau la o stare despre care stim ca poate duce
+intr-o stare finala adaugam stiva de stari la Set-ul productiveStates.
+
+La problema useful, am generat starile productive si accesible, apoi am afisat
+intersectia lor.
+
+La problema synchronize, m-am folosit de algoritmul 2 de pe linkul oferit in
+enunt, prin care se luau cate 2 stari diferite carora li se gasea secventa
+care le aducea intr-o stare comuna si se alipea la secventa care o sa
+sincronizeze tot automatul in final.  Apoi modific pool-ul de stari si iau
+alte 2 stari diferite pana cand se ajunge la una singura. Secventa pentru
+convergenta celor 2 stari o aflu cu functia getSequence din clasa ParallelDfs,
+un "dfs" care creeaza secventa pas cu pas, tranzi- tionand pe aceleasi
+simboluri cele 2 stari, pana cand acestea coincid, luand toate combinatiile
+pana la o solutie.
+
+Pentru cazul in care s nu e 0, pool-ul initial are in loc de toate starile,
+doar pe cele de start, iar pentru cazul in care f nu e 0, se cauta nu numai ca
+starile sa convearga dar sa convearga si intr-una dintre strarile finale.
+(varianta getSequenceSpecial care are mici modificari fata de getSequence).
