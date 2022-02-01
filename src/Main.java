@@ -4,7 +4,8 @@ public class Main {
     public static void main(String[]args){
         Scanner scanner = new Scanner(System.in);
         Input input = new Input(scanner);
-
+	
+	// solve just the wanted problem
         switch (args[0]) {
             case "accessible": {
                 AccessibleStates accessibleStates = new AccessibleStates(input.getTransitions(), input.getSourceStates());
