@@ -1,0 +1,14 @@
+Pitur Sebastian 334CA
+
+Am citit input-ul cu ajutorul clasei Input, salvand tranzitiile in matricea
+transitions.
+
+La problema accessible, am facut BFS pornind din starile initiale, salvandu-le
+pe toate in Set-ul accessibleStates al clasei cu acelasi nume.
+
+La problema productive, am luat starile pe rand si am pornit un dfs, iar daca
+ajungeam la o stare finala sau la o stare despre care stim ca poate duce intr-o
+stare finala adaugam stiva de stari la Set-ul productiveStates.
+
+La problema useful, am generat starile productive si accesible, apoi am afisat
+intersectia lor.
